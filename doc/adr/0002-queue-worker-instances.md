@@ -21,6 +21,8 @@ The queue workers will be new instances except will have no web traffic pushed t
 
 The code base does not change aside from a new environment variable to be able to disable queue message processing, this allows instances to be run in a state where they will not run the shorokyun queue processing worker.
 
+On AWS ECS via Terraform in Mastino a new Container instance will be spun up that does not receive web requests via the load balancer. Existing containers will have the queue processing disabled.
+
 See also: [datacite/datacite#1848](https://github.com/datacite/datacite#1848)
 
 ## Consequences
